@@ -4,18 +4,19 @@ class Pescotapa extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {animated: false}
         this.activateCiro = this.activateCiro.bind(this);
     }
 
     activateCiro() {
-        console.log("CIRO");
+        this.setState({animated: true})
     }
 
     render() {
+        let animated = this.state.animated ? "animated" : ' ';
         return(
             <div>
-              <div id="pescotapa">
-              </div>
+              <div id="pescotapa" className={animated} />
 
               <button onClick={this.activateCiro}>
                 ACTIVATE CIRO

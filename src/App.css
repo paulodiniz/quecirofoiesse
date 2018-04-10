@@ -4,7 +4,7 @@
     background: url('pescotapa.png') left center;
 }
 
-#pescotapa-animated {
+.animated {
     animation: play 1.5s steps(30);
 }
 
