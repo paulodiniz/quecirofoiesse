@@ -12,7 +12,7 @@ class Pescotapa extends Component {
         this.setState({animated: true})
         setTimeout(() => {
             this.setState({animated: false})
-          }, 1005);
+          }, 1500);
     }
 
     render() {
