@@ -10,6 +10,9 @@ class Pescotapa extends Component {
 
     activateCiro() {
         this.setState({animated: true})
+        setTimeout(() => {
+            this.setState({animated: false})
+          }, 1005);
     }
 
     render() {
