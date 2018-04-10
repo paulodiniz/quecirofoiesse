@@ -1,0 +1,13 @@
+#pescotapa {
+    width: 400px;
+    height: 720px;
+    background: url('pescotapa.png') left center;
+}
+
+#pescotapa-animated {
+    animation: play 1.5s steps(30);
+}
+
+@keyframes play {
+    100% { background-position: -12000px; }
+}
