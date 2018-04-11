@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 
+import PescotapaComponent from '../components/PescotapaComponent'
+
 class Pescotapa extends Component {
-    state = { animated: false, score: 0}
+
+    constructor(props) {
+        super(props);
+        this.state = { animated: false, score: 0}
+        this.activateCiro = this.activateCiro.bind(this)
+    }
 
     increaseScore(state, props) {
         return { score: state.score + 1 }
@@ -24,19 +31,14 @@ class Pescotapa extends Component {
     }
 
     render() {
-        let animated = this.state.animated ? "animated" : ' ';
+        let animatedClassName = this.state.animated ? "animated" : ' ';
         return(
-            <div>
-              <div id="pescotapa" className={animated} />
-
-              <button onClick={() => this.activateCiro()} disabled={this.state.animated}>
-                ACTIVATE CIRO
-              </button>
-
-              <div>
-                <p> {this.state.score} </p>
-              </div>
-            </div>
+            <PescotapaComponent
+                activateCiroFn={this.activateCiro}
+                animated={this.state.animated}
+                animatedClassName={animatedClassName}
+                score={this.state.score}
+            />
         )
     }
 }
