@@ -5,7 +5,7 @@
 }
 
 .animated {
-    animation: play 1.5s steps(30);
+    animation: play 0.8s steps(30);
 }
 
 @keyframes play {

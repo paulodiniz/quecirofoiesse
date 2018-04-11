@@ -4,15 +4,27 @@ class Pescotapa extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {animated: false}
-        this.activateCiro = this.activateCiro.bind(this);
+        this.state = {animated: false, score: 0}
+    }
+
+    increaseScore(state, props) {
+        return { score: state.score + 1 }
+    }
+
+    animateCiro(state, props) {
+        return { animated: true }
+    }
+
+    resetCiro(state, props) {
+        return { animated: false }
     }
 
     activateCiro() {
-        this.setState({animated: true})
+        this.setState(this.animateCiro);
+        this.setState(this.increaseScore);
         setTimeout(() => {
-            this.setState({animated: false})
-          }, 1500);
+            this.setState(this.resetCiro)
+          }, 800);
     }
 
     render() {
@@ -21,9 +33,13 @@ class Pescotapa extends Component {
             <div>
               <div id="pescotapa" className={animated} />
 
-              <button onClick={this.activateCiro}>
+              <button onClick={() => this.activateCiro()} disabled={this.state.animated}>
                 ACTIVATE CIRO
               </button>
+
+              <div>
+                <p> {this.state.score} </p>
+              </div>
             </div>
         )
     }
