@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
 class Pescotapa extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {animated: false, score: 0}
-    }
+    state = { animated: false, score: 0}
 
     increaseScore(state, props) {
         return { score: state.score + 1 }
