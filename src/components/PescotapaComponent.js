@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PescotapaComponent = ({activateCiroFn, animated, animatedClassName, score}) => {
+const PescotapaComponent = ({activateCiroFn, animated, animatedClassName, score, children}) => {
     return (
         <div>
           <h1 className="f-subheadline lh-solid tc mb3 mt3" > Que Ciro Foi Esse? </h1>
@@ -15,6 +15,9 @@ const PescotapaComponent = ({activateCiroFn, animated, animatedClassName, score}
               <button onClick={activateCiroFn} disabled={animated} className="bw0 br2 bg-blue pa2 white fw1 tc ttu tracked grow pointer">
                 Mamãe avisou
               </button>
+              <div className="pt3">
+                {children}
+              </div>
             </div>
           </div>
         </div>

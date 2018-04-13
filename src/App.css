@@ -13,6 +13,10 @@ body {
     animation: play 0.8s steps(30);
 }
 
+.share-button {
+    cursor: pointer;
+}
+
 @keyframes play {
     100% { background-position: -12000px; }
 }
