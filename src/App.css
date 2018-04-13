@@ -1,8 +1,11 @@
 @import "~tachyons";
 
+body {
+    font-family: 'helvetica neue', helvetica, sans-serif;
+}
 #pescotapa {
     width: 400px;
-    height: 720px;
+    height: 600px;
     background: url('pescotapa.png') left center;
 }
 
